@@ -1,0 +1,10 @@
+C:\Users\P305532\Documents\GitHub\sprintone\P305532-C#-AT2-Sprint one\Astronomical Processing\Astronomical Processing\bin\Debug\Astronomical Processing.exe.config
+C:\Users\P305532\Documents\GitHub\sprintone\P305532-C#-AT2-Sprint one\Astronomical Processing\Astronomical Processing\bin\Debug\Astronomical Processing.exe
+C:\Users\P305532\Documents\GitHub\sprintone\P305532-C#-AT2-Sprint one\Astronomical Processing\Astronomical Processing\bin\Debug\Astronomical Processing.pdb
+C:\Users\P305532\Documents\GitHub\sprintone\P305532-C#-AT2-Sprint one\Astronomical Processing\Astronomical Processing\obj\Debug\Astronomical Processing.csproj.AssemblyReference.cache
+C:\Users\P305532\Documents\GitHub\sprintone\P305532-C#-AT2-Sprint one\Astronomical Processing\Astronomical Processing\obj\Debug\Astronomical_Processing.Form1.resources
+C:\Users\P305532\Documents\GitHub\sprintone\P305532-C#-AT2-Sprint one\Astronomical Processing\Astronomical Processing\obj\Debug\Astronomical_Processing.Properties.Resources.resources
+C:\Users\P305532\Documents\GitHub\sprintone\P305532-C#-AT2-Sprint one\Astronomical Processing\Astronomical Processing\obj\Debug\Astronomical Processing.csproj.GenerateResource.cache
+C:\Users\P305532\Documents\GitHub\sprintone\P305532-C#-AT2-Sprint one\Astronomical Processing\Astronomical Processing\obj\Debug\Astronomical Processing.csproj.CoreCompileInputs.cache
+C:\Users\P305532\Documents\GitHub\sprintone\P305532-C#-AT2-Sprint one\Astronomical Processing\Astronomical Processing\obj\Debug\Astronomical Processing.exe
+C:\Users\P305532\Documents\GitHub\sprintone\P305532-C#-AT2-Sprint one\Astronomical Processing\Astronomical Processing\obj\Debug\Astronomical Processing.pdb
