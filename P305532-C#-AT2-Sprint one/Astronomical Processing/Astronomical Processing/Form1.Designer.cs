@@ -33,7 +33,7 @@
             this.ButtonSort = new System.Windows.Forms.Button();
             this.ListBoxResults = new System.Windows.Forms.ListBox();
             this.TextBoxInput = new System.Windows.Forms.TextBox();
-            this.ComboBoxHour = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ButtonEdit
@@ -44,6 +44,7 @@
             this.ButtonEdit.TabIndex = 0;
             this.ButtonEdit.Text = "SAVE/EDIT";
             this.ButtonEdit.UseVisualStyleBackColor = true;
+            this.ButtonEdit.Click += new System.EventHandler(this.ButtonEdit_Click);
             // 
             // ButtonSearch
             // 
@@ -61,7 +62,7 @@
             this.ButtonSort.Name = "ButtonSort";
             this.ButtonSort.Size = new System.Drawing.Size(213, 23);
             this.ButtonSort.TabIndex = 2;
-            this.ButtonSort.Text = "SEARCH ALL(SORT)";
+            this.ButtonSort.Text = "SORT";
             this.ButtonSort.UseVisualStyleBackColor = true;
             this.ButtonSort.Click += new System.EventHandler(this.ButtonSort_Click);
             // 
@@ -77,23 +78,24 @@
             // 
             this.TextBoxInput.Location = new System.Drawing.Point(205, 70);
             this.TextBoxInput.Name = "TextBoxInput";
-            this.TextBoxInput.Size = new System.Drawing.Size(112, 20);
+            this.TextBoxInput.Size = new System.Drawing.Size(213, 20);
             this.TextBoxInput.TabIndex = 4;
             // 
-            // ComboBoxHour
+            // label1
             // 
-            this.ComboBoxHour.FormattingEnabled = true;
-            this.ComboBoxHour.Location = new System.Drawing.Point(323, 69);
-            this.ComboBoxHour.Name = "ComboBoxHour";
-            this.ComboBoxHour.Size = new System.Drawing.Size(95, 21);
-            this.ComboBoxHour.TabIndex = 5;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(174, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(122, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Astronomical Processing";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(468, 343);
-            this.Controls.Add(this.ComboBoxHour);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.TextBoxInput);
             this.Controls.Add(this.ListBoxResults);
             this.Controls.Add(this.ButtonSort);
@@ -113,7 +115,7 @@
         private System.Windows.Forms.Button ButtonSort;
         private System.Windows.Forms.ListBox ListBoxResults;
         private System.Windows.Forms.TextBox TextBoxInput;
-        private System.Windows.Forms.ComboBox ComboBoxHour;
+        private System.Windows.Forms.Label label1;
     }
 }
 
