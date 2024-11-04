@@ -41,7 +41,6 @@ namespace Astronomical_Processing
         /// <summary>
         ///  Fill array with random integers between 10 and 90
         /// </summary>
-        /// <param name=""> </param>
         private void FillArray()
         {
             Random randData = new Random();
@@ -56,10 +55,11 @@ namespace Astronomical_Processing
         /// <summary>
         ///  Sort button click
         /// </summary>
-        /// <param name=""> </param>
+        /// <param name="sender"> the source of the event </param>
+        /// <param name="e"> contains the event data </param>
         private void ButtonSort_Click(object sender, EventArgs e)
         {
-        
+
             BubbleSort();
             ShowArray();
             MessageBox.Show("Data sorted successfully!");
@@ -68,7 +68,6 @@ namespace Astronomical_Processing
         /// <summary>
         ///  Bubble Sort Algorithm
         /// </summary>
-        /// <param name=""> </param>
         private void BubbleSort()
         {
             int temp = 0;
@@ -93,7 +92,6 @@ namespace Astronomical_Processing
         /// <summary>
         ///  Display data in the ListBox
         /// </summary>
-        /// <param name=""> </param>
         private void ShowArray()
         {
             ListBoxResults.Items.Clear();
@@ -108,7 +106,8 @@ namespace Astronomical_Processing
         /// <summary>
         ///  Search button Click
         /// </summary>
-        /// <param name=""> </param>
+        /// <param name="sender"> the source of the event </param>
+        /// <param name="e"> contains the event data </param>
         private void ButtonSearch_Click(object sender, EventArgs e)
         {
 
@@ -188,7 +187,8 @@ namespace Astronomical_Processing
         /// <summary>
         ///  Edit,Save Button Click
         /// </summary>
-        /// <param name=""> </param> 
+        /// <param name="sender"> the source of the event </param>
+        /// <param name="e"> contains the event data </param>
         private void ButtonEdit_Click(object sender, EventArgs e)
         {
 
@@ -226,7 +226,8 @@ namespace Astronomical_Processing
         /// <summary>
         ///  Sequential Search Button Click
         /// </summary>
-        /// <param name=""> </param> 
+        /// <param name="sender"> the source of the event </param>
+        /// <param name="e"> contains the event data </param>
         private void ButtonSeqSearch_Click(object sender, EventArgs e)
         {
             TextboxClear();
@@ -281,7 +282,8 @@ namespace Astronomical_Processing
         /// <summary>
         ///  MidExtreme Button Click
         /// </summary>
-        /// <param name=""> </param>
+        /// <param name="sender"> the source of the event </param>
+        /// <param name="e"> contains the event data </param>
         private void ButtonMidExtreme_Click(object sender, EventArgs e)
         {
             double midExtreme = CalculatemidExtreme();
@@ -291,16 +293,17 @@ namespace Astronomical_Processing
         /// <summary>
         ///  Mode Button Click
         /// </summary>
-        /// <param name=""> </param>
+        /// <param name="sender"> the source of the event </param>
+        /// <param name="e"> contains the event data </param>
         private void ButtonMode_Click(object sender, EventArgs e)
         {
-            
+
             int mode = CalculateMode();
             if (mode != -1)
             {
                 TextboxMode.Text = mode.ToString();
             }
-            else 
+            else
             {
                 MessageBox.Show("There is no mode!");
             }
@@ -309,7 +312,8 @@ namespace Astronomical_Processing
         /// <summary>
         ///  Average Button Click
         /// </summary>
-        /// <param name=""> </param>
+        /// <param name="sender"> the source of the event </param>
+        /// <param name="e"> contains the event data </param>
         private void ButtonAverage_Click(object sender, EventArgs e)
         {
             double average = CalculateAverage();
@@ -319,7 +323,8 @@ namespace Astronomical_Processing
         /// <summary>
         ///  Range Button Click
         /// </summary>
-        /// <param name=""> </param>
+        /// <param name="sender"> the source of the event </param>
+        /// <param name="e"> contains the event data </param>
         private void ButtonRange_Click(object sender, EventArgs e)
         {
             int range = CalculateRange();
@@ -329,7 +334,6 @@ namespace Astronomical_Processing
         /// <summary>
         ///  Calculate Mid-Extreme
         /// </summary>
-        /// <param name=""> </param>
         private double CalculatemidExtreme()
         {
             int minData = hourArray[0];
@@ -352,7 +356,6 @@ namespace Astronomical_Processing
         /// <summary>
         ///  Calculate Average
         /// </summary>
-        /// <param name=""> </param>
         private double CalculateAverage()
         {
             int sumAllData = 0;
@@ -366,7 +369,6 @@ namespace Astronomical_Processing
         /// <summary>
         ///  Calculate Range
         /// </summary>
-        /// <param name=""> </param>
         private int CalculateRange()
         {
             int minData = hourArray[0];
@@ -389,7 +391,6 @@ namespace Astronomical_Processing
         /// <summary>
         ///  Calculate Mode
         /// </summary>
-        /// <param name=""> </param>
         private int CalculateMode()
         {
             int mode = hourArray[0];
@@ -397,11 +398,11 @@ namespace Astronomical_Processing
             int repeat = 0;
             bool multiMode = false;
 
-            for (int i = 0; i < hourMax; i++) 
+            for (int i = 0; i < hourMax; i++)
             {
                 repeat = 0;
 
-                for (int j = 1; j < hourMax; j++)
+                for (int j = 0; j < hourMax; j++)
                 {
                     if (hourArray[i] == hourArray[j])
                     {
@@ -412,10 +413,10 @@ namespace Astronomical_Processing
                 {
                     maxRepeat = repeat;
                     mode = hourArray[i];
-                    multiMode = false; 
+                    multiMode = false;
 
                 }
-                else if (repeat == maxRepeat & hourArray[i] != mode) 
+                else if (repeat == maxRepeat & hourArray[i] != mode)
                 {
                     multiMode = true;
                 }
@@ -423,15 +424,16 @@ namespace Astronomical_Processing
             if (!multiMode)
             {
                 return mode;
-            } 
+            }
             return -1;
-       
+
         }
 
         /// <summary>
         ///  Reset button Click
         /// </summary>
-        /// <param name=""> </param>
+        /// <param name="sender"> the source of the event </param>
+        /// <param name="e"> contains the event data </param>
         private void ButtonReset_Click(object sender, EventArgs e)
         {
             FillArray();
@@ -446,15 +448,13 @@ namespace Astronomical_Processing
         /// <summary>
         ///  Textbox clear
         /// </summary>
-        /// <param name=""> </param>
-        private void TextboxClear() 
+       
+        private void TextboxClear()
         {
             TextboxMidExtreme.Clear();
             TextboxMode.Clear();
             TextboxAverage.Clear();
             TextboxRange.Clear();
         }
-
-
     }
 }
