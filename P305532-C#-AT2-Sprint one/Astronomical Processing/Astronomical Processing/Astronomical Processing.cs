@@ -21,7 +21,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Astronomical_Processing
 {
-    public partial class Form1 : Form
+    public partial class AstronomicalForm : Form
     {
         // Array for 24 hours
         const int hourMax = 24;
@@ -30,7 +30,7 @@ namespace Astronomical_Processing
         // checking if the array is sorted
         bool isSorted = false;
 
-        public Form1()
+        public AstronomicalForm()
         {
             InitializeComponent();
             FillArray();
@@ -39,7 +39,7 @@ namespace Astronomical_Processing
         }
 
         /// <summary>
-        ///  Fill array with random integers between 10 and 90
+        ///  Fill the array with random integers between 10 and 90
         /// </summary>
         private void FillArray()
         {
@@ -55,7 +55,7 @@ namespace Astronomical_Processing
         /// <summary>
         ///  Sort button click
         /// </summary>
-        /// <param name="sender"> the source of the event </param>
+        /// <param name="sender"> the button control that triggers the event </param>
         /// <param name="e"> contains the event data </param>
         private void ButtonSort_Click(object sender, EventArgs e)
         {
@@ -66,7 +66,7 @@ namespace Astronomical_Processing
         }
 
         /// <summary>
-        ///  Bubble Sort Algorithm
+        ///  Implements the Bubble Sort Algorithm to sort the data
         /// </summary>
         private void BubbleSort()
         {
@@ -90,7 +90,7 @@ namespace Astronomical_Processing
         }
 
         /// <summary>
-        ///  Display data in the ListBox
+        ///  Displays the array data in the ListBox
         /// </summary>
         private void ShowArray()
         {
@@ -106,7 +106,7 @@ namespace Astronomical_Processing
         /// <summary>
         ///  Search button Click
         /// </summary>
-        /// <param name="sender"> the source of the event </param>
+        /// <param name="sender"> the button control that triggers the event </param>
         /// <param name="e"> contains the event data </param>
         private void ButtonSearch_Click(object sender, EventArgs e)
         {
@@ -153,9 +153,10 @@ namespace Astronomical_Processing
         }
 
         /// <summary>
-        ///  Binary Search Algorithm
+        /// Implements the Binary Search Algorithm to sort the data
         /// </summary>
-        /// <param name="target"> this is the value entered by user in the text box to search </param> 
+        /// <param name="target"> this is the value entered by user in the text box to search </param>
+        /// <returns> If found : the index of target in the array , if not : -1</returns>
         private int BinarySearch(int target)
         {
             int mid;
@@ -187,7 +188,7 @@ namespace Astronomical_Processing
         /// <summary>
         ///  Edit,Save Button Click
         /// </summary>
-        /// <param name="sender"> the source of the event </param>
+        /// <param name="sender"> the button control that triggers the event </param>
         /// <param name="e"> contains the event data </param>
         private void ButtonEdit_Click(object sender, EventArgs e)
         {
@@ -226,7 +227,7 @@ namespace Astronomical_Processing
         /// <summary>
         ///  Sequential Search Button Click
         /// </summary>
-        /// <param name="sender"> the source of the event </param>
+        /// <param name="sender"> the button control that triggers the event </param>
         /// <param name="e"> contains the event data </param>
         private void ButtonSeqSearch_Click(object sender, EventArgs e)
         {
@@ -262,10 +263,13 @@ namespace Astronomical_Processing
             else
             {
                 MessageBox.Show("Enter vaild data!");
-                return;
             }
         }
-
+        /// <summary>
+        ///  Implements Sequential Search Algorithm
+        /// </summary>
+        /// <param name="target"> this is the value entered by user in the textbox to search </param> 
+        /// <returns> If found : the index of target in the array , if not : -1</returns>
         private int SequentialSearch(int target)
         {
             for (int i = 0; i < hourMax; i++)
@@ -282,18 +286,18 @@ namespace Astronomical_Processing
         /// <summary>
         ///  MidExtreme Button Click
         /// </summary>
-        /// <param name="sender"> the source of the event </param>
+        /// <param name="sender"> the button control that triggers the event </param>
         /// <param name="e"> contains the event data </param>
         private void ButtonMidExtreme_Click(object sender, EventArgs e)
         {
-            double midExtreme = CalculatemidExtreme();
+            double midExtreme = CalculateMidExtreme();
             TextboxMidExtreme.Text = midExtreme.ToString();
         }
 
         /// <summary>
         ///  Mode Button Click
         /// </summary>
-        /// <param name="sender"> the source of the event </param>
+        /// <param name="sender"> the button control that triggers the event </param>
         /// <param name="e"> contains the event data </param>
         private void ButtonMode_Click(object sender, EventArgs e)
         {
@@ -312,7 +316,7 @@ namespace Astronomical_Processing
         /// <summary>
         ///  Average Button Click
         /// </summary>
-        /// <param name="sender"> the source of the event </param>
+        /// <param name="sender"> the button control that triggers the event </param>
         /// <param name="e"> contains the event data </param>
         private void ButtonAverage_Click(object sender, EventArgs e)
         {
@@ -323,7 +327,7 @@ namespace Astronomical_Processing
         /// <summary>
         ///  Range Button Click
         /// </summary>
-        /// <param name="sender"> the source of the event </param>
+        /// <param name="sender"> the button control that triggers the event </param>
         /// <param name="e"> contains the event data </param>
         private void ButtonRange_Click(object sender, EventArgs e)
         {
@@ -332,9 +336,10 @@ namespace Astronomical_Processing
         }
 
         /// <summary>
-        ///  Calculate Mid-Extreme
+        ///  Calculates the Mid-Extreme of the data
         /// </summary>
-        private double CalculatemidExtreme()
+        /// <returns>The Mid-Extreme value as a double</returns>
+        private double CalculateMidExtreme()
         {
             int minData = hourArray[0];
             int maxData = hourArray[0];
@@ -354,8 +359,9 @@ namespace Astronomical_Processing
         }
 
         /// <summary>
-        ///  Calculate Average
+        /// Calculates the Calculate Average of the data
         /// </summary>
+        /// <returns>The Average value as a double</returns>
         private double CalculateAverage()
         {
             int sumAllData = 0;
@@ -367,8 +373,9 @@ namespace Astronomical_Processing
         }
 
         /// <summary>
-        ///  Calculate Range
+        /// Calculates the Range of the data
         /// </summary>
+        /// <returns>The Range value as a integer</returns>
         private int CalculateRange()
         {
             int minData = hourArray[0];
@@ -389,8 +396,9 @@ namespace Astronomical_Processing
         }
 
         /// <summary>
-        ///  Calculate Mode
+        ///  Calculates the Mode of the data
         /// </summary>
+        /// <returns>The Mode value as a integer</returns>
         private int CalculateMode()
         {
             int mode = hourArray[0];
@@ -432,7 +440,7 @@ namespace Astronomical_Processing
         /// <summary>
         ///  Reset button Click
         /// </summary>
-        /// <param name="sender"> the source of the event </param>
+        /// <param name="sender"> the button control that triggers the event </param>
         /// <param name="e"> contains the event data </param>
         private void ButtonReset_Click(object sender, EventArgs e)
         {
@@ -446,7 +454,7 @@ namespace Astronomical_Processing
         }
 
         /// <summary>
-        ///  Textbox clear
+        ///  Clear the text in all textboxes.
         /// </summary>
        
         private void TextboxClear()

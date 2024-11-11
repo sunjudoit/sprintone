@@ -1,6 +1,6 @@
 ﻿namespace Astronomical_Processing
 {
-    partial class Form1
+    partial class AstronomicalForm
     {
         /// <summary>
         /// Required designer variable.
